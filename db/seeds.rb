@@ -7,7 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Article.destroy_all
-a = Article.create!(title: 'faire les courses', content: "scsdsdddsdsd")
-puts "article #{a.title} created"
-a= Article.create!(title: 'faire les flashcards', content: "xcdsdsdsdsdsdsdd")
-puts "article #{a.title} created"
+
+10.times do
+  title = Faker::Book.title #=> "The Odd Sister"
+  content = Faker::Lorem.paragraphs(1, true)
+
+  a= Article.create!(title: title, content: content)
+  puts "article #{a.title} created"
+end
