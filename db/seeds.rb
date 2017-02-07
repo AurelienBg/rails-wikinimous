@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Article.destroy_all
+a = Article.create!(title: 'faire les courses', content: "scsdsdddsdsd")
+puts "article #{a.title} created"
+a= Article.create!(title: 'faire les flashcards', content: "xcdsdsdsdsdsdsdd")
+puts "article #{a.title} created"
